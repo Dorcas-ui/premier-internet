@@ -1,0 +1,267 @@
+/* --- GLOBAL STYLING --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1A1A1A; /* Dark gray for a sleek look */
+    color: #FFFFFF; /* White for text */
+}
+
+/* --- VIDEO BACKGROUND --- */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2; /* Pushes video behind all content */
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: -1;
+}
+
+/* --- HEADER & NAVIGATION --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex; /* Make logo container a flex container */
+    align-items: center; /* Vertically align items */
+    gap: 15px; /* Space between logo image and text */
+}
+
+.logo img {
+    height: 150px;
+}
+.company-name {
+    font-family: 'Montserrat', sans-serif; /* Use a bold font */
+    font-size: 3.2rem; /* Adjusted size to be bigger */
+    font-weight: 700; /* Bold */
+    color: #FFD700; /* Yellow color */
+    letter-spacing: 2px; /* Add some spacing */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.main-nav a:hover {
+    color: #FFD700; /* Gold/yellow on hover */
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.login-btn {
+    background-color: #FFD700; /* Yellow button background */
+    color: #1A1A1A; /* Black text */
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #FFFFFF; /* White on hover */
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #FFD700; /* Yellow subheading */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #1A1A1A;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+/* --- SECTION STYLING --- */
+section {
+    padding: 80px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* --- SERVICES SECTION --- */
+.services-section {
+    background-color: #101010;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #222222;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    border: 2px solid #222222;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    border-color: #FFD700;
+    transform: translateY(-5px);
+}
+
+.card h4 {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+/* --- ABOUT US & CONTACT SECTIONS --- */
+.about-section {
+    background-color: #151515;
+}
+
+.contact-section {
+    background-color: #101010;
+}
+
+.contact-section h3 {
+    color: #FFD700;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 40px auto 0;
+    background-color: #222222;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #FFD700;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFD700;
+    color: #1A1A1A;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #FFFFFF;
+} 
