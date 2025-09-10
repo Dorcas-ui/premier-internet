@@ -1,0 +1,28 @@
+.container{
+    width: 70%; /*this makes the content to fluidly cover 70% of 
+                    the device no matter the size of device used*/
+    margin:0 auto;
+    border: 2px solid black;
+    padding: 20px;  /*it determines the space between margin and the content*/
+}
+h1{
+    color: red;
+}
+body{
+    font-size:18px;
+}
+/* following code means, if width of device changes size
+to below 600px then, the font size,background and color change 
+to the given size in carlibraces*/
+@media(max-width: 600px){
+    body{
+    font-size:12px;
+    background-color: rgb(6, 77, 97);
+    color: white;
+        }
+}
+/* below is a code for flexible image*/
+img{
+    max-width: 100%;
+    height:auto;
+}
